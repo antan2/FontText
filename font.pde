@@ -21,20 +21,21 @@ public int[] nToBinary(int num) {
   }
   return ans;
 }
+public int tempN = 0;
 
 
 public String[] list = {"hello world", "does this work", "testing testing testing", "abcdefg", "hijklmno", "prqrstuvwxyz", "1234567890", "hedgehogs are great"};
 public void setup(){
   size(1000, 1000);
-  background(255, 255, 255);
+  background(0, 0, 0);
   noLoop();
 }
 public void draw(){
-  background(255, 255, 255);
+  background(0, 0, 0);
   int tempString = (int)(Math.random()*list.length);
   print(list[tempString]);
-  fontText(list[tempString], width/2, height/2, width/20, height/20, color(0, 0, 0), "CENTER", "digital");
-  fill(0, 0, 0);
+  fontText(list[tempString], width/2, height/2, width/20, height/20, color(255, 255, 255), "CENTER", "digital");
+  fill(255, 255, 255);
   textSize(20);
   textAlign(CENTER, CENTER);
   text(list[tempString], width/2, height/2+height/10);
@@ -63,7 +64,7 @@ public void fontText(String fs, float fx, float fy, float fw, float fh, int fc, 
   }
 }
 public void letter(char lc, float lx, float  ly, float lw, float lh, String lf) {
-  int tempN = 0;
+  tempN = 0;
   for (int k = 0; k < a0z25.length; k++) {
     if (lc == a0z25[k]) {
       tempN = k;
