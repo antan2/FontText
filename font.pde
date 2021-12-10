@@ -34,6 +34,10 @@ public void draw(){
   int tempN = (int)(Math.random()*list.length);
   print(list[tempN]);
   fontText(list[tempN], width/2, height/2, width/20, height/20, color(0, 0, 0), "CENTER", "digital");
+  fill(0, 0, 0);
+  textSize(20);
+  textAlign(CENTER, CENTER);
+  text(list[tempN], width/2, height/2+height/10);
 }
 public void mousePressed(){
   redraw();
