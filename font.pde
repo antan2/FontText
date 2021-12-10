@@ -33,11 +33,11 @@ public void draw(){
   background(255, 255, 255);
   int tempString = (int)(Math.random()*list.length);
   print(list[tempString]);
-  fontText(list[tempN], width/2, height/2, width/20, height/20, color(0, 0, 0), "CENTER", "digital");
+  fontText(list[tempString], width/2, height/2, width/20, height/20, color(0, 0, 0), "CENTER", "digital");
   fill(0, 0, 0);
   textSize(20);
   textAlign(CENTER, CENTER);
-  text(list[tempN], width/2, height/2+height/10);
+  text(list[tempString], width/2, height/2+height/10);
 }
 public void mousePressed(){
   redraw();
@@ -71,7 +71,8 @@ public void letter(char lc, float lx, float  ly, float lw, float lh, String lf) 
   }
   if (lf == "digital") {
     for (int j = 0; j < nToBinary(digiFont[tempN]).length; j++) {
-      if (nToBinary(digiFont[tempN])[nToBinary(digiFont[tempN]).length-1-j] == 1) {
+      int[] tempAns = nToBinary(digiFont[tempN]);
+      if (tempAns[nToBinary(digiFont[tempN]).length-1-j] == 1) { //<-- maybe?
         if (j == 0) {
           line(lx+lw/2, ly+lh/2, lx, ly);
         }
