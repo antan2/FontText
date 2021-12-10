@@ -31,8 +31,8 @@ public void setup(){
 }
 public void draw(){
   background(255, 255, 255);
-  int tempN = (int)(Math.random()*list.length);
-  print(list[tempN]);
+  int tempString = (int)(Math.random()*list.length);
+  print(list[tempString]);
   fontText(list[tempN], width/2, height/2, width/20, height/20, color(0, 0, 0), "CENTER", "digital");
   fill(0, 0, 0);
   textSize(20);
