@@ -31,7 +31,9 @@ public void setup(){
 }
 public void draw(){
   background(255, 255, 255);
-  fontText(list[(int)(Math.random()*list.length)], width/2, height/2, width/20, height/20, color(0, 0, 0), "CENTER", "digital");
+  int tempN = (int)(Math.random()*list.length);
+  print(list[tempN]);
+  fontText(list[tempN], width/2, height/2, width/20, height/20, color(0, 0, 0), "CENTER", "digital");
 }
 public void mousePressed(){
   redraw();
